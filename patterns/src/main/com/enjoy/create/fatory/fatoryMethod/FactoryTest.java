@@ -14,8 +14,7 @@ public class FactoryTest {
 
     public static void main(String[] args) {
         //初始化苹果工厂
-//        fruitFactory = new AppleFactory();//spring配置
-
+      //  fruitFactory = new AppleFactory();//spring配置
         peterdo();
         jamesdo();
         lisondo();

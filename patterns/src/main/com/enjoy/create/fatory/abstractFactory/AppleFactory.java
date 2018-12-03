@@ -19,4 +19,6 @@ public class AppleFactory extends AbstractFactory{
     public Bag getBag() {
         return new AppleBag();
     }
+
+
 }

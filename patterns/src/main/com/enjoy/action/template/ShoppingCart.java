@@ -47,8 +47,8 @@ public abstract class ShoppingCart {
         for (Fruit fruit : products){
             fruit.draw();
             System.out.print(",");
-            money += fruit.price();
-        }
+            money += fruit.price();        }
+
         return money;
     }
 

@@ -27,6 +27,7 @@ public class AdapterClient {
 		//把苹果盒适配成桔子包装盒
 		OrangeBag orangeBag = new OrangeBagAdapter(appleBag);
 
+
 		return orangeBag;
 	}
 }

@@ -9,7 +9,6 @@ public class ObserverClient {
 
     public static void main(String[] args) {
         MangoAttention attentions = new MangoAttention();//目标
-
         attentions.add(new CustomerObserver("deer"));
         attentions.add(new CustomerObserver("james"));
         attentions.add(new CustomerObserver("lison"));

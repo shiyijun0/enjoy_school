@@ -12,4 +12,10 @@ public abstract class AbstractFactory {
 
     public abstract Bag getBag();
 
+    public   void aVoid(){
+        System.out.println("普通方法**********");
+    };
+
+
+
 }

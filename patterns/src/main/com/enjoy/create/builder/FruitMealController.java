@@ -7,8 +7,8 @@ package com.enjoy.create.builder;
 public class FruitMealController {//收银台---导演类
 
     public void construct() {
-//        Builder builder = new HolidayBuilder();
-        Builder builder = new OldCustomerBuilder();//spring注入方法，
+       Builder builder = new HolidayBuilder();
+      //  Builder builder = new OldCustomerBuilder();//spring注入方法，
 
         //以下代码模板，轻易是不变的
         builder.buildApple(120);//创建苹果设置价格

@@ -35,8 +35,8 @@ public class ShoppingCartClient {
         ShoppingCart cart = new OtherPayShopping(products);
 
         //注入优惠方案
-//        String discount = "second";
-//        cart.setDiscount(disCounts.get(discount));
+       String discount = "second";
+        cart.setDiscount(disCounts.get(discount));
 
         cart.submitOrder();
     }
