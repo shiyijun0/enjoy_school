@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/mvc
+      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+      ">
+
+    <mvc:annotation-driven />
+    <!--以注解的方式配置bean,指定bean所在的包  -->
+
+    <!--<context:component-scan base-package="com.ly.controller"/>-->
+
+    <!-- 1、注册业务Action -->
+    <bean name="/hello.action" class="controller.HelloHAE"></bean>
+
+    <!-- 2、如果业务Action中配置的是逻辑视图名称，那么必须配置视图解析器，如第三步业务Action配置的是逻辑视图success，那么为了最终将数据送至success.jsp展示，那么必须
+　　　　　　配置如下的视图解析器，告知springmvc去哪里寻找最终要展示的目标视图，即/success.jsp -->
+    <!-- 3、如果业务Action中配置的是真实视图名称，即/success.jsp，那么视图解析器可选 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 路径前缀 -->
+        <property name="prefix" value="/"></property>
+        <!-- 路径后缀 -->
+        <property name="suffix" value=".jsp"></property>
+        <!-- 前缀+视图逻辑名+后缀 -->
+    </bean>
+</beans>
+
