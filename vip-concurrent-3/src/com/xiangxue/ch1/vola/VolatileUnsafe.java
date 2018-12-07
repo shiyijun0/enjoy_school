@@ -12,15 +12,24 @@ public class VolatileUnsafe {
 	private static class VolatileVar implements Runnable {
 
 		private volatile int a = 0;
+		private ThreadLocal<Integer> threadLocal=new ThreadLocal<Integer>(){
+			@Override
+			protected Integer initialValue() {
+				return 1;
+			}
+		};
 		
 	    @Override
 	    public void run() {
+	    	//int a=0;
 	    	String threadName = Thread.currentThread().getName();
 	    	a = a++;
-	    	System.out.println(threadName+":======"+a);
+
+	    	System.out.println(threadName+":==222===="+a+"********"+threadLocal.get());
 	    	SleepTools.ms(100);
 	    	a = a+1;
-	    	System.out.println(threadName+":======"+a);
+	    	threadLocal.set(a);
+	    	System.out.println(threadName+":======"+a+"********"+threadLocal.get());
 	    }
 	}
 	
@@ -36,6 +45,11 @@ public class VolatileUnsafe {
         t2.start();
         t3.start();
         t4.start();
+
+		Thread t5 = new Thread(v);
+		Thread t6 = new Thread(v);
+		t5.start();
+		t6.start();
     }
 
 }

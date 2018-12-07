@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.xiangxue.tools.SleepTools;
 
@@ -41,10 +42,14 @@ public class UseFuture {
 		Random r = new Random();
 		SleepTools.second(1);
 		if(r.nextBoolean()) {//随机决定是获得结果还是终止任务
+			//futureTask.cancel(false);
+			System.out.println(futureTask.isDone()+"***true***"+futureTask.isCancelled());
 			System.out.println("Get UseCallable result = "+futureTask.get());
 		}else {
-			System.out.println("中断计算");
+			//System.out.println("***false***"+r.nextBoolean());
+
 			futureTask.cancel(true);
+			System.out.println(futureTask.isDone()+"中断计算"+futureTask.isCancelled());
 		}
 		
 	}

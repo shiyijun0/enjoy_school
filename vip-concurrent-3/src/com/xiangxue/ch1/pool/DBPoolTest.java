@@ -49,7 +49,8 @@ public class DBPoolTest {
                 try {
                     // 从线程池中获取连接，如果1000ms内无法获取到，将会返回null
                     // 分别统计连接获取的数量got和未获取到的数量notGot
-                    Connection connection = pool.fetchConn(1000);
+                    long start=System.currentTimeMillis();
+                    Connection connection = pool.fetchConn(20000);
                     if (connection != null) {
                         try {
                             connection.createStatement();
@@ -61,7 +62,7 @@ public class DBPoolTest {
                     } else {
                         notGot.incrementAndGet();
                         System.out.println(Thread.currentThread().getName()
-                        		+"等待超时!");
+                        		+"等待超时!"+(System.currentTimeMillis()-start));
                     }
                 } catch (Exception ex) {
                 } finally {

@@ -43,7 +43,7 @@ public class UseThreadLocal {
             threadLaocl.set(s);
             System.out.println(Thread.currentThread().getName()+":"
             +threadLaocl.get());
-            //threadLaocl.remove();
+           // threadLaocl.remove();
         }
     }
 

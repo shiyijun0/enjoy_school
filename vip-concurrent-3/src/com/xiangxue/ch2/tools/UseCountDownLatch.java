@@ -1,6 +1,7 @@
 package com.xiangxue.ch2.tools;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.xiangxue.tools.SleepTools;
 
@@ -13,6 +14,8 @@ import com.xiangxue.tools.SleepTools;
 public class UseCountDownLatch {
 	
 	static CountDownLatch latch = new CountDownLatch(6);
+
+	static AtomicInteger atomicInteger=new AtomicInteger(0);
 
 	//初始化线程(只有一步，有4个)
     private static class InitThread implements Runnable{
