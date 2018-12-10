@@ -33,4 +33,8 @@ public class SleepTools {
         } catch (InterruptedException e) {
         }
     }
+
+    public static void main(String[] args) {
+        /*if(compareAndSetState.)*/
+    }
 }

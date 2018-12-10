@@ -1,9 +1,9 @@
 package com.xiangxue.ch4.aqs;
 
+import com.xiangxue.tools.SleepTools;
+
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
-import com.xiangxue.tools.SleepTools;
 
 /**
  *@author Mark老师   享学课堂 https://enjoy.ke.qq.com 
@@ -12,7 +12,8 @@ import com.xiangxue.tools.SleepTools;
  */
 public class TestMyLock {
     public void test() {
-        final Lock lock = new ReentrantLock();
+      //  final Lock lock = new ReentrantLock();
+        final Lock lock = new SelfLock();
         
         class Worker extends Thread {
             public void run() {
