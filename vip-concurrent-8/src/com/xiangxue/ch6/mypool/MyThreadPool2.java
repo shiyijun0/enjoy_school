@@ -1,7 +1,5 @@
 package com.xiangxue.ch6.mypool;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -39,7 +37,7 @@ public class MyThreadPool2 {
         	workThreads[i] = new WorkThread();
         	workThreads[i].start();
         }
-        Runtime.getRuntime().availableProcessors();
+        Runtime.getRuntime().availableProcessors();//当前cpu核心数
     }
 
 
@@ -81,8 +79,10 @@ public class MyThreadPool2 {
     	public void run(){
     		Runnable r = null;
     		try {
+                System.out.println(interrupted()+"*****");
 				while (!isInterrupted()) {
-					r = taskQueue.take();
+                    System.out.println(interrupted());
+                    r = taskQueue.take();
 					if(r!=null) {
 						System.out.println(getId()+" ready exec :"+r);
 						r.run();

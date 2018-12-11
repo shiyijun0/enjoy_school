@@ -29,7 +29,13 @@ public class PutOrder implements Runnable {
 		Order ordeJd = new Order("Jd54321",366);
 		ItemVo<Order> itemJd = new ItemVo<Order>(8000,ordeJd);
 		queue.offer(itemJd);
-		System.out.println("订单8秒后到期："+ordeJd.getOrderNo());		
+		System.out.println("订单8秒后到期："+ordeJd.getOrderNo());
+
+		//10秒到期
+		Order order=new Order("10miao到期",366);
+		ItemVo<Order> itemVo=new ItemVo<>(10000,order);
+		queue.offer(itemVo);//放入订单
+		System.out.println("订单10秒到期"+order.getOrderNo());
 		
 	}	
 }

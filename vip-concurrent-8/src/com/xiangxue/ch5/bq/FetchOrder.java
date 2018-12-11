@@ -20,10 +20,20 @@ public class FetchOrder implements Runnable {
 	public void run() {
 		while(true) {
 			try {
+				System.out.println("线程取出是不是阻塞了");
+				System.out.println(Thread.currentThread().isInterrupted()+"**34****");
+				if(Thread.currentThread().isInterrupted()){
+					System.out.println("线程终于中断了********");
+					break;
+				}
 				ItemVo<Order> item = queue.take();
+				System.out.println("线程取出真实是阻塞了******");
 				Order order = (Order)item.getDate();
 				System.out.println("get from queue:"+order.getOrderNo());
+				System.out.println(Thread.currentThread().isInterrupted()+"******");
+
 			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
 				e.printStackTrace();
 			}
 		}

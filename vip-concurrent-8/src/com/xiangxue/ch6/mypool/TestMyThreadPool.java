@@ -16,7 +16,7 @@ public class TestMyThreadPool {
         t.execute(new MyTask("testC"));
         t.execute(new MyTask("testD"));
         t.execute(new MyTask("testE"));
-        System.out.println(t);
+        System.out.println(t+"********mian");
         Thread.sleep(10000);
         t.destroy();// 所有线程都执行完成才destory
         System.out.println(t);
