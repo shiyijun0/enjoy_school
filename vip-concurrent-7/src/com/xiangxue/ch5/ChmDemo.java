@@ -2,7 +2,7 @@ package com.xiangxue.ch5;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-public class ChmDemo {
+public class  ChmDemo {
 
 	public static void main(String[] args) {
 		
