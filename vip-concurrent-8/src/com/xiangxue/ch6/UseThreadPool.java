@@ -1,16 +1,9 @@
 package com.xiangxue.ch6;
 
-import java.util.Random;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-
 import com.xiangxue.tools.SleepTools;
+
+import java.util.Random;
+import java.util.concurrent.*;
 
 /**
  *@author Mark老师   享学课堂 https://enjoy.ke.qq.com 
@@ -71,6 +64,7 @@ public class UseThreadPool {
     	for(int i=0;i<6;i++) {
     		Worker worker = new Worker("worker_"+i);
     		pool.execute(worker);
+           // System.out.println("&&&&&&&&&&&"+pool.);
     	}
     	for(int i=0;i<6;i++) {
     		CallWorker callWorker = new CallWorker("callWorker_"+i);
