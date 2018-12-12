@@ -1,7 +1,9 @@
 package com.xiangxue.ch7.tranfer;
 
 import com.xiangxue.ch7.tranfer.service.ITransfer;
+import com.xiangxue.ch7.tranfer.service.SafeOperate;
 import com.xiangxue.ch7.tranfer.service.SafeOperateToo;
+import com.xiangxue.ch7.tranfer.service.TrasnferAccount;
 
 /**
  *@author Mark老师   享学课堂 https://enjoy.ke.qq.com 
@@ -39,22 +41,17 @@ public class PayCompany {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        //死锁：保证加锁顺序可以解决
+    public static void main(String[] args) {
         PayCompany payCompany = new PayCompany();
         UserAccount zhangsan = new UserAccount("zhangsan",20000);
         UserAccount lisi = new UserAccount("lisi",20000);
         ITransfer transfer = new SafeOperateToo();
-       // ITransfer transfer = new TrasnferAccount();
         TransferThread zhangsanToLisi = new TransferThread("zhangsanToLisi"
                 ,zhangsan,lisi,2000,transfer);
         TransferThread lisiToZhangsan = new TransferThread("lisiToZhangsan"
                 ,lisi,zhangsan,4000,transfer);
         zhangsanToLisi.start();
         lisiToZhangsan.start();
-
-        Thread.sleep(1000);
-        System.out.println(lisi.getAmount()+"**45**"+zhangsan.getAmount());
 
     }
 

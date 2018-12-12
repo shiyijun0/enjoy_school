@@ -1,9 +1,9 @@
 package com.xiangxue.ch7.tranfer.service;
 
+import java.util.Random;
+
 import com.xiangxue.ch7.tranfer.UserAccount;
 import com.xiangxue.tools.SleepTools;
-
-import java.util.Random;
 
 /**
  *@author Mark老师   享学课堂 https://enjoy.ke.qq.com 
@@ -20,12 +20,11 @@ public class SafeOperateToo implements ITransfer {
     		if(from.getLock().tryLock()) {
     			try {
     				System.out.println(Thread.currentThread().getName()
-    						+" get ***"+from.getName());
-    				//两个拿锁会互相谦让，比如A拿到1 在拿到2锁，而B拿到2在想拿1相互谦让，后来都释放锁
+    						+" get "+from.getName());
     				if(to.getLock().tryLock()) {
     					try {
     	    				System.out.println(Thread.currentThread().getName()
-    	    						+" get&&&& "+to.getName());
+    	    						+" get "+to.getName());    						
     						//两把锁都拿到了
     	                    from.flyMoney(amount);
     	                    to.addMoney(amount);
