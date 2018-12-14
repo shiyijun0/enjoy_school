@@ -3,7 +3,7 @@ package com.xiangxue.ch01;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MetaSpace {
+public class  MetaSpace {
 	
 	public static void main(String[] args) {
 		
