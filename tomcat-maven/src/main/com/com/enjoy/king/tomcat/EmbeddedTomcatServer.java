@@ -35,15 +35,15 @@ public class EmbeddedTomcatServer {
 		 host.setName("localhost");
 		 host.setAppBase("webapps");
 		 //前面的那个步骤只是把Tomcat起起来了，但是没啥东西
-		 //要把class加载进来,把启动的工程加入进来了
+		 //要把class加载进来,把启动的工程加入进来了 热部署
 		 Context context =tomcat.addContext(host, "/", classpath);
 
 		 if(context instanceof StandardContext){
 			 StandardContext standardContext = (StandardContext)context;
-			 standardContext.setDefaultContextXml("F:\\tomcat\\apache-tomcat-8.0.53\\conf\\web.xml");
+			 standardContext.setDefaultContextXml("F:\\tomcat1\\apache-tomcat-8.0.53\\conf\\web.xml");
 		     //我们要把Servlet设置进去
 			 Wrapper wrapper =  tomcat.addServlet("/", "DemoServlet", new DemoServlet());
-			 wrapper.addMapping("/king");
+			 wrapper.addMapping("/king2");
 		 }
 		 //Tomcat跑起来
 		 tomcat.start();
