@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="syj">
+    <output-path>$PROJECT_DIR$/classes/artifacts/syj</output-path>
+    <root id="archive" name="syj.jar">
+      <element id="directory" name="com">
+        <element id="directory" name="xiangxue">
+          <element id="directory" name="ch03">
+            <element id="directory" name="deencrpt" />
+          </element>
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
