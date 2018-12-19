@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/enjoyStore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enjoyStore/storeApi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enjoyStore/storePotal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enjoyStore/storeServer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/enjoyStore/storeServerApi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storeBoot" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

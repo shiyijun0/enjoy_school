@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="store_portal:war">
+    <output-path>$PROJECT_DIR$/enjoyStore/storePotal/target</output-path>
+    <root id="archive" name="store.war">
+      <element id="artifact" artifact-name="store_portal:war exploded" />
+    </root>
+  </artifact>
+</component>

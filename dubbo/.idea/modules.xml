@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/dubbo.iml" filepath="$PROJECT_DIR$/.idea/dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enjoyStore/enjoyStore.iml" filepath="$PROJECT_DIR$/enjoyStore/enjoyStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enjoyStore/storeServer/store_Server.iml" filepath="$PROJECT_DIR$/enjoyStore/storeServer/store_Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enjoyStore/storeServerApi/store_Server_Api.iml" filepath="$PROJECT_DIR$/enjoyStore/storeServerApi/store_Server_Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enjoyStore/storeApi/store_api.iml" filepath="$PROJECT_DIR$/enjoyStore/storeApi/store_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/enjoyStore/storePotal/store_portal.iml" filepath="$PROJECT_DIR$/enjoyStore/storePotal/store_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storeBoot/storeboot.iml" filepath="$PROJECT_DIR$/storeBoot/storeboot.iml" />
+    </modules>
+  </component>
+</project>
