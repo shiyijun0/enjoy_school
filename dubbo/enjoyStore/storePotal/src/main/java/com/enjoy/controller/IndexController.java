@@ -3,6 +3,7 @@ package com.enjoy.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.rpc.service.EchoService;
 import com.enjoy.service.OrderService;
+import com.enjoy.service.ProductService;
 import com.enjoy.service.UserService;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -25,6 +26,9 @@ public class IndexController implements ApplicationContextAware{
 
     @Reference
     private OrderService orderService;
+
+    @Reference
+    private ProductService productService;
 
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)

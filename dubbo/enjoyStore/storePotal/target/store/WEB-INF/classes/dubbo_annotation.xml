@@ -12,10 +12,11 @@
 	 http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="enjoyStore_annotation"/>
+   <!-- <dubbo:application name="enjoyStore_annotation12"/>-->
+    <!--<dubbo:consumer check="false" />-->
 
     <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <!--<dubbo:registry address="zookeeper://127.0.0.1:2181" check="false"/>-->
+    <!--<dubbo:registry address="zookeeper://39.105.169.182:2182" check="false"/>-->
 
     <dubbo:annotation package="com.enjoy.controller" />
 

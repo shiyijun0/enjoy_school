@@ -22,12 +22,14 @@ public class StoreProvider {
             // 连接注册中心配置
             RegistryConfig registry = new RegistryConfig();
             registry.setProtocol("zookeeper");
-            registry.setAddress("172.17.0.2:2181");
+            registry.setAddress("39.105.169.182:2182");
 
             // 服务提供者协议配置
             ProtocolConfig protocol = new ProtocolConfig();
-            protocol.setName("rmi");
-            protocol.setPort(21880);
+            /*protocol.setName("rmi");
+            protocol.setPort(21880);*/
+        protocol.setName("dubbo");
+        protocol.setPort(20881);
             protocol.setThreads(100);
 
             // 注意：ServiceConfig为重对象，内部封装了与注册中心的连接，以及开启服务端口

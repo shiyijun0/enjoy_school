@@ -14,12 +14,13 @@ public class StoreConsumer {
         // 连接注册中心配置
         RegistryConfig registry = new RegistryConfig();
         registry.setProtocol("zookeeper");
-        registry.setAddress("172.17.0.2:2181");
+        registry.setAddress("39.105.169.182:2182");
 
         // 服务提供者协议配置
         ProtocolConfig protocol = new ProtocolConfig();
         protocol.setName("dubbo");
-        protocol.setPort(20882);
+        protocol.setPort(20883);
+       // protocol.setPort(21880);
         protocol.setThreads(100);
 
         // 注意：ReferenceConfig为重对象，内部封装了与注册中心的连接，以及与服务提供方的连接
@@ -33,9 +34,14 @@ public class StoreConsumer {
         VipUserService vipUserService = reference.get(); // 注意：此代理对象内部封装了所有通讯细节，对象较重，请缓存复用
         String ret = vipUserService.getVipDetail("123");
         reference.destroy();
-        System.out.println(ret);
+        System.out.println("*******455676******"+ret);
 
-
+        try {
+            Thread.sleep(100000000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.in.read();
 
     }
 

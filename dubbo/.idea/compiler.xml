@@ -20,6 +20,7 @@
       <module name="store_Server" target="1.7" />
       <module name="store_Server_Api" target="1.7" />
       <module name="storeboot" target="1.7" />
+      <module name="storeServer" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
