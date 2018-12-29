@@ -17,7 +17,7 @@ public class LinCondition implements Condition{
 	*/
 	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-		// TODO 是否为WINDOW系统
+		// TODO 是否为LINEX系统
 		//能获取到IOC容器正在使用的beanFactory
 		ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
 		//获取当前环境变量(包括我们操作系统是WIN还是LINUX??)

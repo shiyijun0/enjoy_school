@@ -1,12 +1,12 @@
+import com.enjoy.cap6.bean.Monkey;
+import com.enjoy.cap6.config.Cap6MainConfig;
+import com.enjoy.cap6.config.JamesFactoryBean;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.enjoy.cap5.config.Cap5MainConfig;
-import com.enjoy.cap6.config.Cap6MainConfig;
-
 public class Cap6Test {
 	@Test
-	public void test01(){
+	public void test01() throws Exception{
 		AnnotationConfigApplicationContext app = new AnnotationConfigApplicationContext(Cap6MainConfig.class);
 		
 		System.out.println("IOC容器创建完成........");
@@ -19,7 +19,11 @@ public class Cap6Test {
 		
 		
 
-		Object bean3 = app.getBean("&jamesFactoryBean");//取Money
+		Object bean3 = app.getBean("&jamesFactoryBean");//取jamesFactoryBean
+		Monkey monkey=(Monkey)bean1;
+		JamesFactoryBean jamesFactoryBean=(JamesFactoryBean) bean3;
+		System.out.println(monkey.getName());
+		System.out.println(jamesFactoryBean.getObject().getName());
 		
 		String[] beanDefinitionNames = app.getBeanDefinitionNames();
 		for(String name:beanDefinitionNames){

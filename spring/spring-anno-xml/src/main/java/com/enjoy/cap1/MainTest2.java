@@ -1,10 +1,8 @@
 package com.enjoy.cap1;
 
+import com.enjoy.cap1.config.MainConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.enjoy.cap1.config.MainConfig;
 
 public class MainTest2 { 
 	public static void main(String args[]){
@@ -22,7 +20,12 @@ public class MainTest2 {
 		for(String name:namesForBean){
 			System.out.println(name);
 		}
-		
+		Person person = (Person) app.getBean("abcPerson");
+
+		System.out.println(person.getName());
+
+		MainConfig mainConfig = (MainConfig) app.getBean("mainConfig");
+		System.out.println(mainConfig.person01().getName());
 		
 	}
 }

@@ -25,5 +25,8 @@ public class Cap5MainConfig {
 		System.out.println("给容器中添加james.......");
 		return new Person("james",20);
 	}
+
+	//factoryBean  注册bean,从java实例bean通过他注入到容器里
+	//benaFactory  从容器里拿已经拿已注册好的bean
 	
 }
