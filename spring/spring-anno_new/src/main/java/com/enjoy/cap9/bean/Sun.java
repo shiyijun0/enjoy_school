@@ -1,9 +1,8 @@
 package com.enjoy.cap9.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Sun {
 	private Moon moon;
 	

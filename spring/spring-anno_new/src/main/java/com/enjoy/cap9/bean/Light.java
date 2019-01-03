@@ -10,7 +10,7 @@ import org.springframework.util.StringValueResolver;
 
 //实现 BeanNameAware 与 ApplicationContextAware接口
 
-@Component
+//@Component
 public class Light implements ApplicationContextAware, BeanNameAware, EmbeddedValueResolverAware {
 	private ApplicationContext applicationContext;
 	

@@ -23,6 +23,7 @@ public class WinCondition implements Condition{
 		//获取当前环境变量(包括我们操作系统是WIN还是LINUX??)
 		Environment environment = context.getEnvironment();
 		String os_name = environment.getProperty("os.name");
+		System.out.println(os_name+"*************");
 		if(os_name.contains("Windows")){
 			return true;
 		}
