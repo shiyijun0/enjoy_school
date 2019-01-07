@@ -4,7 +4,10 @@
 	<groupId>com.enjoy</groupId>
 	<artifactId>springmvc-anno</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+    <modules>
+        <module>../springmvc</module>
+	</modules>
+    <packaging>pom</packaging>
 
 	<dependencies>
 		<dependency>
