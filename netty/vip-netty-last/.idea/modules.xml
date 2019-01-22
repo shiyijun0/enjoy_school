@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/advantage/advantage.iml" filepath="$PROJECT_DIR$/advantage/advantage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basic/basic.iml" filepath="$PROJECT_DIR$/basic/basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comet/comet.iml" filepath="$PROJECT_DIR$/comet/comet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/http-server/http-server.iml" filepath="$PROJECT_DIR$/http-server/http-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stomp/stomp.iml" filepath="$PROJECT_DIR$/stomp/stomp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/udp/udp.iml" filepath="$PROJECT_DIR$/udp/udp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vip-netty.iml" filepath="$PROJECT_DIR$/vip-netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket/websocket.iml" filepath="$PROJECT_DIR$/websocket/websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-netty/websocket-netty.iml" filepath="$PROJECT_DIR$/websocket-netty/websocket-netty.iml" />
+    </modules>
+  </component>
+</project>

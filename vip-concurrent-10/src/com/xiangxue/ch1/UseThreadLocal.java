@@ -19,7 +19,7 @@ public class UseThreadLocal {
      * 运行3个线程
      */
     public void StartThreadArray(){
-        Thread[] runs = new Thread[3];
+        Thread[] runs = new Thread[50];
         for(int i=0;i<runs.length;i++){
             runs[i]=new Thread(new TestThread(i));
         }
@@ -36,13 +36,15 @@ public class UseThreadLocal {
         public TestThread(int id){
             this.id = id;
         }
+       // Integer s=0;
         public void run() {
-            System.out.println(Thread.currentThread().getName()+":start");
+
+           // System.out.println(Thread.currentThread().getName()+":start****id:"+id);
             Integer s = threadLaocl.get();//获得变量的值
             s = s+id;
             threadLaocl.set(s);
             System.out.println(Thread.currentThread().getName()+":"
-            +threadLaocl.get());
+            +threadLaocl.get()+"**id:***"+s);
             //threadLaocl.remove();
         }
     }
@@ -50,5 +52,6 @@ public class UseThreadLocal {
     public static void main(String[] args){
     	UseThreadLocal test = new UseThreadLocal();
         test.StartThreadArray();
+
     }
 }

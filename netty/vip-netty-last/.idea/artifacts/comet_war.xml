@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="comet:war">
+    <output-path>$PROJECT_DIR$/comet/target</output-path>
+    <root id="archive" name="comet.war">
+      <element id="artifact" artifact-name="comet:war exploded" />
+    </root>
+  </artifact>
+</component>
